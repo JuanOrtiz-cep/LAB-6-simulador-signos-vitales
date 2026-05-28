@@ -5,9 +5,9 @@
 
 # Introducción
 
-Los monitores de signos vitales son dispositivos biomédicos fundamentales en el entorno clínico, ya que permiten supervisar continuamente parámetros fisiológicos como frecuencia cardíaca, saturación periférica de oxígeno (SpO₂), presión arterial y frecuencia respiratoria.
+Los monitores de signos vitales son dispositivos biomédicos escenciales en el entorno clínico, ya que permiten supervisar de forma continua parámetros fisiológicos tales como frecuencia cardíaca, saturación periférica de oxígeno (SpO₂), presión arterial y frecuencia respiratoria.
 
-En esta práctica se utilizó el monitor de signos vitales uMEC 100 junto con el simulador Pronk OxSim OX-1 para evaluar el comportamiento del sistema ante diferentes condiciones fisiológicas simuladas.
+En esta práctica se utilizó el monitor de signos vitales uMEC 100 junto con el simulador Pronk OxSim OX-1 para evaluar el comportamiento del sistema de monitoreo de signos vitales ante diferentes condiciones fisiológicas simuladas.
 
 ---
 
@@ -15,14 +15,16 @@ En esta práctica se utilizó el monitor de signos vitales uMEC 100 junto con el
 
 ## Objetivo general
 
-Verificar el funcionamiento del monitor uMEC 100 mediante el simulador biomédico OxSim OX-1.
+Operar con el simulador Pronk OxSim (OX-1) y el monitor de signos vitales uMEC 100 para pruebas funcionales.
 
 ## Objetivos específicos
 
-- Identificar los parámetros fisiológicos simulables.
-- Evaluar la activación de alarmas fisiológicas.
-- Calcular errores absolutos y porcentuales.
-- Analizar la señal fotopletismográfica obtenida.
+- Identificar los modos de operación de un simulador de parámetros
+hemodinámicos (Pronk OxSim).
+- Verificar los límites de medición de un monitor de signos vitales mediante
+simulación de variables hemodinámicas.
+- Interpretar variaciones en los parámetros hemodinámicos asociadas a
+estados fisiológicos y patológicos.
 
 ---
 
@@ -79,7 +81,6 @@ La señal PPG permite estimar:
 5. Verificar que el sistema esté en modo “Monitor”.
 6. Conectar los sensores correspondientes.
 
-> Nota: La interfaz puede variar dependiendo de la versión del firmware.
 
 ---
 
@@ -107,6 +108,15 @@ La señal PPG permite estimar:
 ---
 
 # PARTE B
+# 1. tabla para verificación de alarmas
+
+| Prueba | Parámetro monitoreado | Límite configurado (alto/bajo) | Valor simulado en OxSim | Valor observado en uMEC100 (a los 5 s) | ¿Alarma activa? | Tiempo de respuesta |
+|---|---|---|---|---|---|---|
+| 1 | SpO₂ baja | Límite inferior = 90% | SpO₂ = 85%, FC = 80 bpm | SpO₂ = 82%, FC = 64 bpm | Sí | ~6 s |
+| 2 | SpO₂ alta (Low Perfusion) | Límite superior = 97% | SpO₂ = 99% | SpO₂ = 87% | Sí | ~24 s (13 s para mostrar el valor y 11 s adicionales para activar la alarma) |
+| 3 | Frecuencia cardíaca alta (Taquicardia) | Límite superior FC (configuración predeterminada del monitor) | FC = 140 bpm, SpO₂ = 95% | FC = 101 bpm, SpO₂ = 97% | Sí | ~22 s (14 s para mostrar el valor y 8 s adicionales para activar la alarma) |
+
+---
 
 # 2. Procedimiento Experimental
 
@@ -196,9 +206,12 @@ Error porcentual: ((140-101)/140)*100 = 27.85%
 
 ---
 
-### FIN PARTE BBBBBBBBBBBBBBBB
+## Análisis:
 
-`[Agregar análisis realizado]`
+En los resultados vistos podemos ver por ejemplo que en algunos casos, el monitor de signos vitales se demora algunos segundos más de los 5 segundos pre establecidos para llegar al valor dado por el simulador, esto se puede deber por varios factores, desde el error humano al cronometrar, hasta algún delay o falla en el simulador al monitor llegando a 87% a los 5 segundos y además la alarma tardo 11 segundos más después de aparecer el valor, entonces esto si podría ser falta de calibración en alguno de los dos dispositivos a valores más altos.
+
+Por otra parte en los BPM se tarda en pasar de 80 a 140 BPM, 14 segundos, lo cual puede tener un sentido fisiologico debido a que una persona real no puede pasar de 80 a 140 bpm tan rápido, si no como máximo, aumento en primer minuto	18±9 latidos (hombres)		
+aumento en primer minuto	23±11 latidos (mujeres) y esto en atletas de alto rendimiento [7], y los monitores si cuentan con curvas exponenciales por lo general de 10 segundos aproximadamente lo cual es consistente.
 
 ---
 
@@ -273,3 +286,4 @@ Esto provoca una baja relación señal-ruido, haciendo que el monitor interprete
 4. Carr, J. J., & Brown, J. M. *Introduction to Biomedical Equipment Technology*. Pearson.
 5. IEC 60601-1-8. *Medical Electrical Equipment – Alarm Systems*.
 6. ISO 80601-2-61. *Particular requirements for pulse oximeter equipment*.
+7. Jagoda A, Myers JN, Kaminsky LA, Whaley MH. Heart rate response at the onset of exercise in an apparently healthy cohort. Eur J Appl Physiol. 2014;114(7):1367-75. doi: 10.1007/s00421-014-2867-0. Epub 2014 Mar 19. PMID: 24643428.
