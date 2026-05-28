@@ -126,7 +126,7 @@ con los mostrados en el uMEC100.
 aparece en la pantalla del uMEC100.
 
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/835c551e-8274-474b-8394-d9eab8d30a7a" />
-Fotopletimografía 40bpm, SpO2=95%
+Fotopletismografía 40bpm, SpO2=95%
 
 En este paso, desde el momento que se puso la opción 40 bpm, SpO2 =
 95% en el OxSim, el uMEC100 tardó aproxímadamente 6 segundos en mostrar en el monitor ambas variables correctamente. 
