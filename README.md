@@ -108,154 +108,98 @@ La señal PPG permite estimar:
 
 # PARTE B
 
-# 1. Tabla de verificación de alarmas
-
-Ítem	Objetivo	Valor simulado	"Límite configurado
-uMEC100"	superir/inferior	¿alarma activa?	Tiempo de respuesta Sp02%(s)	"Tiempo de respuesta
-bpm(s)"
-4	Config. OxSim	"40 bpm
-SpO2 =95%"	N/A	N/A	No	6	
-5	Imagen 5						
-6	Config. Alarma		SpO2=95%	inferior	Si		
-7	Config. OxSim	"80bpm
-SpO2=85%"	SpO2=95%	inferior	Sí	6	
-8	Config. Alarma		SpO2=97%	superior	Si		
-9	Config. OxSim	"SpO2=99%
-Low Perfusion"	SpO2=97%	superior	Si	11	
-10	Config. OxSim	"140bpm
-SpO2=95%"	"140bmp
-previo en el uMEC100"		¿?		7
-<img width="918" height="270" alt="image" src="https://github.com/user-attachments/assets/7797e753-bb97-48a5-becf-bf1b4de06d34" />
-
-
----
-
 # 2. Procedimiento Experimental
 
-## Paso 1: Configuración inicial
+1. Despúes de encender el uMEC100, se configura en modo monitor y se conecta el sensor SpO₂ al OxSim OX-1. Una vez allí se realizan los ítems del 4-10 cuyos resultados se ven en la tabla, siendo los tiempos de respuesta en segundos aquel tiempo que tardó el monitor en mostrar el resultado correcto hasta la activación de la alarma respectiva propuesta por la guía.
 
-- Se encendió el monitor uMEC100.
-- Se configuró en modo monitor.
-- Se conectó el sensor SpO₂ al OxSim OX-1.
 
----
+<img width="918" height="270" alt="image" src="https://github.com/user-attachments/assets/ad6a26f3-f572-48ae-89d8-9882518687e7" />
 
-## Paso 2: Simulación de bradicardia
 
-### Configuración
-- Frecuencia cardíaca: 40 bpm
-- SpO₂: 95 %
+<img width="953" height="161" alt="image" src="https://github.com/user-attachments/assets/e41bca0d-f7dd-4370-8183-5c7dbb9843bb" />
 
-### Resultados
 
-| Variable | Valor simulado | Valor medido | Error absoluto | Error porcentual |
-|---|---|---|---|---|
-| Frecuencia cardíaca | 40 bpm | `[Agregar]` | `[Agregar]` | `[Agregar]` |
-| SpO₂ | 95 % | `[Agregar]` | `[Agregar]` | `[Agregar]` |
+4.Configure el OxSim para simular un paciente bradicárdico (40 bpm, SpO2 =
+95%) y calcule los errores absoluto y porcentual para cada variable en relación
+con los mostrados en el uMEC100.
+5. Observe y registre la forma de onda de la señal fotopletismográfica que
+aparece en la pantalla del uMEC100.
 
----
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/835c551e-8274-474b-8394-d9eab8d30a7a" />
+Fotopletimografía 40bpm, SpO2=95%
 
-## Onda fotopletismográfica
+En este paso, desde el momento que se puso la opción 40 bpm, SpO2 =
+95% en el OxSim, el uMEC100 tardó aproxímadamente 6 segundos en mostrar en el monitor ambas variables correctamente. 
 
-### Imagen de la señal
-`[Insertar imagen]`
+En este ítem no se utilizó ningún tiempo para comparar, siendo así que no se calcula el error, más allá de tener en cuenta que se llegó al valor esperado en aproxímadamente 6 segundos.
 
-### Observaciones
-`[Agregar observaciones]`
 
----
+6. En el uMEC100, establezca el límite inferior de alarma de SpO2 a 90%.
+   
+7. Ajuste el OxSim hasta poder simular una frecuencia cardíaca de 80 bpm y
+SPO2 = 85%. A partir de ese instante, cuente 5 segundos y, al cabo de ese
+tiempo, verifique y registre la activación de la alarma sonora/visual en el
+uMEC100. Nuevamente, calcule los errores absoluto y porcentual para cada
+variable en relación con los mostrados en el uMEC100.
 
-## Paso 3: Alarma de SpO₂ baja
+Desde el momento que se puso la opción 80 bpm y SPO2 = 85% en el OxSim, el uMEC100 tardó aproxímadamente 6 segundos en mostrar la correctamente la variable a medir (SPO2 = 85%), mismo tiempo que tardó la respectiva alarma en activarse. A los 5 segundos el SpO2 estaba en: 82%. 
 
-### Configuración
-- Límite inferior: 90 %
-- Frecuencia cardíaca: 80 bpm
-- SpO₂: 85 %
+SpO2:
 
-### Resultados
+Error absoluto: 85-82= 3
 
-| Variable | Valor simulado | Valor medido | Error absoluto | Error porcentual |
-|---|---|---|---|---|
-| Frecuencia cardíaca | 80 bpm | `[Agregar]` | `[Agregar]` | `[Agregar]` |
-| SpO₂ | 85 % | `[Agregar]` | `[Agregar]` | `[Agregar]` |
+Error porcentual: ((85-82)/85)*100 = 3.529%
 
-### Activación de alarma
+Bmp
 
-- ¿Alarma sonora?: `[Sí/No]`
-- ¿Alarma visual?: `[Sí/No]`
-- Tiempo de respuesta: `[Agregar]`
+Error absoluto: 80-64 = 16
 
----
+Error porcentual: ((80-64)/80)*100 = 20%
 
-## Paso 4: Alarma de SpO₂ alta
+8. Configure la alarma de límite superior en el uMEC100 a 97%.
+ 
+9. Ajuste el OxSim hasta poder simular una SPO2 = 99% (modo “Low Perfusion”).
+A partir de ese instante, cuente 5 segundos y, al cabo de ese tiempo, verifique
+y registre la activación de la alarma sonora/visual en el uMEC100.
+Nuevamente, calcule los errores absoluto y porcentual para cada variable en
+relación con los mostrados en el uMEC100. ¿La onda fotopletismográfica se
+distorsiona?
 
-### Configuración
-- Límite superior: 97 %
-- SpO₂: 99 %
-- Modo: “Low Perfusion”
+Desde el momento que se puso la opción SPO2 = 99% (modo “Low Perfusion”) en el OxSim, el uMEC100 tardó aproxímadamente 13 segundos en mostrar la correctamente la variable a medir (SPO2 = 99%), y la alarma tardó 11 más en activarse despúes de mostrar el valor. A los 5 segundos de poner el respectivo modo el SpO2 estaba en: 87%. 
 
-### Resultados
+SpO2:
 
-| Variable | Valor simulado | Valor medido | Error absoluto | Error porcentual |
-|---|---|---|---|---|
-| SpO₂ | 99 % | `[Agregar]` | `[Agregar]` | `[Agregar]` |
+Error absoluto: 99- 87 = 12
 
-### Observaciones
+Error porcentual: ((99-87)/99)*100 = 12.121%
 
-- ¿Se activó la alarma?: `[Sí/No]`
-- ¿La onda PPG se distorsionó?: `[Sí/No]`
-- Descripción: `[Agregar descripción]`
+En el momento exacto que la alarma se activó para Low Perfusion (SpO2 alto<97) la onda fotopletismográfica se veía así, se vé que cambia respecto al modo anterior, sin embargo al menos para ese instante no se ve "distorsionada".
 
----
+<img width="1080" height="567" alt="image" src="https://github.com/user-attachments/assets/af4dbdcf-631a-4ad4-9e48-8e51657b90ce" />
 
-## Paso 5: Simulación de taquicardia
 
-### Configuración
-- SpO₂: 95 %
-- Frecuencia cardíaca: 140 bpm
+10. Con un valor de SpO2 = 95%, genere una taquicardia (140 bpm) con el OxSim
+y registre la onda en el uMEC100. ¿Se dispara la alarma de frecuencia
+cardíaca elevada? Nuevamente, calcule los errores absoluto y porcentual para
+cada variable en relación con los mostrados en el uMEC100.
 
-### Resultados
+Al poner la opción de SpO2 = 95% y 140 bpm, lo esperable es que aparezca la alarma para taquicardia, el uMEC100 tardó aproxímadamente 14 segundos en pasar de 80bpm a 140bpm, y la alarma tardó 8 segundos más en activarse despúes de mostrar el valor de 140bmp. A los 5 segundos de poner el respectivo modo el SpO2 estaba en: 87%. 
 
-| Variable | Valor simulado | Valor medido | Error absoluto | Error porcentual |
-|---|---|---|---|---|
-| Frecuencia cardíaca | 140 bpm | `[Agregar]` | `[Agregar]` | `[Agregar]` |
-| SpO₂ | 95 % | `[Agregar]` | `[Agregar]` | `[Agregar]` |
+SpO2:
 
-### Observaciones
+Error absoluto: 95-98 = -3, valor absoluto = 3
 
-- ¿Se activó la alarma de FC alta?: `[Sí/No]`
-- Descripción de la onda: `[Agregar]`
+Error porcentual: ((95-98)/95)*100 = 3.157%
+
+Bmp
+
+Error absoluto: 140-87 = 53
+
+Error porcentual: ((140-87)/140)*100 = 37.85%
 
 ---
 
-# Análisis de Resultados
-
-## Análisis 1: Diferencias entre valores simulados y medidos
-
-### Fórmulas utilizadas
-
-#### Error absoluto
-
-\[
-E_a = |Valor_{simulado} - Valor_{medido}|
-\]
-
-#### Error porcentual
-
-\[
-E_{\%} = \frac{|Valor_{simulado} - Valor_{medido}|}{Valor_{simulado}} \times 100
-\]
-
----
-
-### Resultados estadísticos
-
-| Variable | Promedio error | Desviación estándar |
-|---|---|---|
-| SpO₂ | `[Agregar]` | `[Agregar]` |
-| Frecuencia cardíaca | `[Agregar]` | `[Agregar]` |
-
-### Interpretación
+### FIN PARTE BBBBBBBBBBBBBBBB
 
 `[Agregar análisis realizado]`
 
