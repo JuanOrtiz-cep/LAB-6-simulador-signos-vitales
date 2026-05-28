@@ -110,11 +110,23 @@ La señal PPG permite estimar:
 
 # 1. Tabla de verificación de alarmas
 
-| Límite configurado | Valor simulado | ¿Alarma activa? | Tiempo de respuesta |
-|---|---|---|---|
-| `[Agregar]` | `[Agregar]` | `[Sí/No]` | `[Agregar]` |
-| `[Agregar]` | `[Agregar]` | `[Sí/No]` | `[Agregar]` |
-| `[Agregar]` | `[Agregar]` | `[Sí/No]` | `[Agregar]` |
+Ítem	Objetivo	Valor simulado	"Límite configurado
+uMEC100"	superir/inferior	¿alarma activa?	Tiempo de respuesta Sp02%(s)	"Tiempo de respuesta
+bpm(s)"
+4	Config. OxSim	"40 bpm
+SpO2 =95%"	N/A	N/A	No	6	
+5	Imagen 5						
+6	Config. Alarma		SpO2=95%	inferior	Si		
+7	Config. OxSim	"80bpm
+SpO2=85%"	SpO2=95%	inferior	Sí	6	
+8	Config. Alarma		SpO2=97%	superior	Si		
+9	Config. OxSim	"SpO2=99%
+Low Perfusion"	SpO2=97%	superior	Si	11	
+10	Config. OxSim	"140bpm
+SpO2=95%"	"140bmp
+previo en el uMEC100"		¿?		7
+<img width="918" height="270" alt="image" src="https://github.com/user-attachments/assets/7797e753-bb97-48a5-becf-bf1b4de06d34" />
+
 
 ---
 
