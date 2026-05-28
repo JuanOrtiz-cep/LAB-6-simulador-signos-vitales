@@ -113,10 +113,7 @@ La señal PPG permite estimar:
 1. Despúes de encender el uMEC100, se configura en modo monitor y se conecta el sensor SpO₂ al OxSim OX-1. Una vez allí se realizan los ítems del 4-10 cuyos resultados se ven en la tabla, siendo los tiempos de respuesta en segundos aquel tiempo que tardó el monitor en mostrar el resultado correcto hasta la activación de la alarma respectiva propuesta por la guía.
 
 
-<img width="918" height="270" alt="image" src="https://github.com/user-attachments/assets/ad6a26f3-f572-48ae-89d8-9882518687e7" />
-
-
-<img width="953" height="161" alt="image" src="https://github.com/user-attachments/assets/e41bca0d-f7dd-4370-8183-5c7dbb9843bb" />
+<img width="953" height="471" alt="image" src="https://github.com/user-attachments/assets/8cbe03b7-7e24-4818-9803-8a6071b5356d" />
 
 
 4.Configure el OxSim para simular un paciente bradicárdico (40 bpm, SpO2 =
