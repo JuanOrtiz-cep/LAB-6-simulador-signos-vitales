@@ -247,36 +247,14 @@ Esto provoca una baja relación señal-ruido, haciendo que el monitor interprete
 
 # Conclusiones
 
-1. El monitor uMEC100 respondió adecuadamente ante las condiciones fisiológicas simuladas.
+1. El monitor uMEC100 respondió adecuadamente ante las condiciones fisiológicas simuladas, con algunas variaciones en los tiempos de llegada a los valores correctos.
 2. Las alarmas fisiológicas se activaron correctamente cuando los parámetros excedieron los límites establecidos.
 3. La baja perfusión produjo distorsiones en la señal fotopletismográfica.
 4. El OxSim OX-1 permitió simular escenarios clínicos útiles para pruebas biomédicas.
 
 ---
 
-# Evidencias Experimentales
 
-## Fotografías del montaje
-`[Insertar imágenes]`
-
-## Capturas del monitor
-`[Insertar imágenes]`
-
-## Gráficas obtenidas
-`[Insertar gráficas]`
-
----
-
-# Repositorio GitHub
-
-## Enlace
-`[Agregar enlace GitHub]`
-
-## Colaboradores
-- `[Nombre 1]`
-- `[Nombre 2]`
-
----
 
 # Referencias
 
