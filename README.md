@@ -183,19 +183,19 @@ y registre la onda en el uMEC100. ¿Se dispara la alarma de frecuencia
 cardíaca elevada? Nuevamente, calcule los errores absoluto y porcentual para
 cada variable en relación con los mostrados en el uMEC100.
 
-Al poner la opción de SpO2 = 95% y 140 bpm, lo esperable es que aparezca la alarma para taquicardia, el uMEC100 tardó aproxímadamente 14 segundos en pasar de 80bpm a 140bpm, y la alarma tardó 8 segundos más en activarse despúes de mostrar el valor de 140bmp. A los 5 segundos de poner el respectivo modo el SpO2 estaba en: 87%. 
+Al poner la opción de SpO2 = 95% y 140 bpm, lo esperable es que aparezca la alarma para taquicardia, el uMEC100 tardó aproxímadamente 14 segundos en pasar de 80bpm a 140bpm, y la alarma tardó 8 segundos más en activarse despúes de mostrar el valor de 140bmp. A los 5 segundos de poner el respectivo modo el SpO2 estaba en 87%. y los bpm en 101
 
 SpO2:
 
-Error absoluto: 95-98 = -3, valor absoluto = 3
+Error absoluto: 95-97 = -2, valor absoluto = 2
 
-Error porcentual: ((95-98)/95)*100 = 3.157%
+Error porcentual: ((95-97)/95)*100 = 2.10%
 
 Bmp
 
-Error absoluto: 140-87 = 53
+Error absoluto: 140-101 = 39
 
-Error porcentual: ((140-87)/140)*100 = 37.85%
+Error porcentual: ((140-101)/140)*100 = 27.85%
 
 ---
 
