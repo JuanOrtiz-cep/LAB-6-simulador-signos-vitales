@@ -211,7 +211,7 @@ Error porcentual: ((140-101)/140)*100 = 27.85%
 En los resultados vistos podemos ver por ejemplo que en algunos casos, el monitor de signos vitales se demora algunos segundos más de los 5 segundos pre establecidos para llegar al valor dado por el simulador, esto se puede deber por varios factores, desde el error humano al cronometrar, hasta algún delay o falla en el simulador al monitor llegando a 87% a los 5 segundos y además la alarma tardo 11 segundos más después de aparecer el valor, entonces esto si podría ser falta de calibración en alguno de los dos dispositivos a valores más altos.
 
 Por otra parte en los BPM se tarda en pasar de 80 a 140 BPM, 14 segundos, lo cual puede tener un sentido fisiologico debido a que una persona real no puede pasar de 80 a 140 bpm tan rápido, si no como máximo, aumento en primer minuto	18±9 latidos (hombres)		
-aumento en primer minuto	23±11 latidos (mujeres) y esto en atletas de alto rendimiento [7], y los monitores si cuentan con curvas exponenciales por lo general de 10 segundos aproximadamente lo cual es consistente.
+aumento en primer minuto	23±11 latidos (mujeres) y esto en atletas de alto rendimiento [7], y los monitores si cuentan con curvas exponenciales por lo general de 10 segundos aproximadamente lo cual es consistente con estos tiempos y da una explicación al retardo
 
 ---
 
@@ -247,10 +247,9 @@ Esto provoca una baja relación señal-ruido, haciendo que el monitor interprete
 
 # Conclusiones
 
-1. El monitor uMEC100 respondió adecuadamente ante las condiciones fisiológicas simuladas, con algunas variaciones en los tiempos de llegada a los valores correctos.
-2. Las alarmas fisiológicas se activaron correctamente cuando los parámetros excedieron los límites establecidos.
-3. La baja perfusión produjo distorsiones en la señal fotopletismográfica.
-4. El OxSim OX-1 permitió simular escenarios clínicos útiles para pruebas biomédicas.
+El monitor uMEC100 respondió adecuadamente ante las condiciones fisiológicas simuladas, con algunas variaciones en los tiempos de llegada a los valores correctos, con variaciones y porcentajes de error aceptables.
+Por otra parte se lograron probar y medir varias configuraciones del simulador de signos vitales e identificar sus modos de operación y su funcionamiento realizando un análisis comprensivo.
+Se interpretaron los datos arropados por el monitor de signos vitales al usar el simulador desde una mirada estadística, fisiológico y patológica,  asignando le un estado a las distintas configuraciones del simulador.
 
 ---
 
