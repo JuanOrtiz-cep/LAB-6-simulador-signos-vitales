@@ -5,7 +5,7 @@
 
 # Introducción
 
-Los monitores de signos vitales son dispositivos biomédicos escenciales en el entorno clínico, ya que permiten supervisar de forma continua parámetros fisiológicos tales como frecuencia cardíaca, saturación periférica de oxígeno (SpO₂), presión arterial y frecuencia respiratoria.
+Los monitores de signos vitales son dispositivos biomédicos escenciales en el entorno clínico, ya que permiten supervisar de forma continua parámetros fisiológicos tales como frecuencia cardíaca, saturación periférica de oxígeno (SpO₂),  presión arterial y frecuencia respiratoria.
 
 En esta práctica se utilizó el monitor de signos vitales uMEC 100 junto con el simulador Pronk OxSim OX-1 para evaluar el comportamiento del sistema de monitoreo de signos vitales ante diferentes condiciones fisiológicas simuladas.
 
